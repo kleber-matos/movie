@@ -1,11 +1,70 @@
 import styled from "styled-components";
 
+export const ContainerFilmes = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: solid white;
+
+  section {
+    border: red solid;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+`;
+
 export const Card = styled.div`
   border: solid 2px red;
-  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15vw;
   height: 50vh;
+  margin: 1rem;
+
   img {
     width: 100%;
     height: 50%;
+  }
+  h2 {
+    font-size: 19px;
+  }
+  p {
+    font-size: 10px;
+  }
+
+  button a {
+    font-size: 5px;
+    background-color: #8a0000;
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  button {
+    width: 60%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #8a0000;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 800px) {
+    width: 90%;
+  }
+`;
+
+export const ButtonPages = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 30vw;
+  button {
+    border: none;
+    cursor: pointer;
   }
 `;
