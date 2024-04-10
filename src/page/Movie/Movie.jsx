@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AiFillStar, AiFillPlayCircle } from "react-icons/ai";
@@ -5,6 +7,7 @@ import { AiFillStar, AiFillPlayCircle } from "react-icons/ai";
 import * as S from "./style";
 import { useParams } from "react-router-dom";
 import Loading from "../../components/Loading/Loading";
+import Header from "../../components/Header/Header";
 
 export default function Movie() {
   // const [filmes, setFilmes] = useState([]);
@@ -37,27 +40,31 @@ export default function Movie() {
 
   return (
     <>
+      <Header />
+
       {
         <S.Container>
-          <S.Details>
+          <S.Center>
             <img
               src={`https://image.tmdb.org/t/p/w500/${filme.backdrop_path}`}
               alt=""
             />
-            <h1>{filme.title}</h1>
-            <h3>{filme.release_date}</h3>
-            <div>
-              <h3>Avaliação: {filme.vote_average}</h3> |
-              <AiFillStar />
-            </div>
-            <p>{filme.tagline}</p>
-            <h3>Sinopse</h3>
-            <p>{filme.overview}</p>
-            <S.Trailer target="_blank" href={filme.homepage}>
-              <AiFillPlayCircle />
-              Ver Trailer
-            </S.Trailer>
-          </S.Details>
+            <S.Details>
+              <h1>{filme.title}</h1>
+              <h3>{filme.release_date}</h3>
+              <div>
+                <h3>Avaliação: {filme.vote_average}</h3> |
+                <AiFillStar />
+              </div>
+              <p>{filme.tagline}</p>
+              <h3>Sinopse</h3>
+              <p>{filme.overview}</p>
+              <S.Trailer target="_blank" href={filme.homepage}>
+                <AiFillPlayCircle />
+                Ver Trailer
+              </S.Trailer>
+            </S.Details>
+          </S.Center>
         </S.Container>
       }
     </>

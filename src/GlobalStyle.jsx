@@ -1,3 +1,5 @@
+/** @format */
+
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -7,12 +9,15 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    background-color: #181818;
-    color: white;
 }
 
 a{
     text-decoration: none;
+}
+
+body{
+    background-color: #181818;
+    color: white;
 }
 
 `;

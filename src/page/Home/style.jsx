@@ -1,3 +1,5 @@
+/** @format */
+
 import styled from "styled-components";
 
 export const ContainerFilmes = styled.section`
@@ -66,5 +68,17 @@ export const ButtonPages = styled.div`
   button {
     border: none;
     cursor: pointer;
+  }
+`;
+
+export const SubTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
   }
 `;

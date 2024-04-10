@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
@@ -5,9 +7,19 @@ import * as S from "./style";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Loading from "../../components/Loading/Loading";
+import Header from "../../components/Header/Header";
+import Carrosel from "../../components/Carrosel/Carrosel";
+
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 export default function Home() {
   const [filmes, setFilmes] = useState([]);
+  const [page, setPage] = useState(1);
   const [load, setLoad] = useState(true);
 
   const buscaDados = async () => {
@@ -26,7 +38,6 @@ export default function Home() {
     }
   };
 
-  const [page, setPage] = useState(1);
   const nextPage = () => {
     if (page < 100) {
       setPage((prev) => prev + 1);
@@ -49,17 +60,31 @@ export default function Home() {
 
   return (
     <div>
-      <h1>home</h1>
+      <Header />
+      <Carrosel />
+      <S.SubTitle>
+        <h2>SAIBA MAIS SOBRE SEU FILME FAVORITO</h2>
+      </S.SubTitle>
 
-      <S.ButtonPages>
-        <button onClick={() => beforePage()}>
-          <AiOutlineDoubleLeft />
-        </button>
-        <p>{page}</p>
-        <button onClick={() => nextPage()}>
-          <AiOutlineDoubleRight />
-        </button>
-      </S.ButtonPages>
+      <Swiper
+        modules={[Navigation, Autoplay, Pagination]}
+        slidesPerView={4}
+        spaceBetween={200}
+        autoplay={{ delay: 4000 }}>
+        {filmes.map((item) => (
+          <SwiperSlide>
+            <Link to={`/movie/${item.id}`}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <S.SubTitle>
+        <h2>Todos os filmes</h2>
+      </S.SubTitle>
 
       <S.ContainerFilmes>
         <section>
@@ -81,6 +106,16 @@ export default function Home() {
           ))}
         </section>
       </S.ContainerFilmes>
+
+      <S.ButtonPages>
+        <button onClick={() => beforePage()}>
+          <AiOutlineDoubleLeft />
+        </button>
+        <p>{page}</p>
+        <button onClick={() => nextPage()}>
+          <AiOutlineDoubleRight />
+        </button>
+      </S.ButtonPages>
     </div>
   );
 }
