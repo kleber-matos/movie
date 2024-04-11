@@ -1,10 +1,8 @@
 /** @format */
-
-import React from "react";
+import * as S from "./styles";
 import { Link } from "react-router-dom";
 import { BiSolidMoviePlay } from "react-icons/bi";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import * as S from "./styles";
 
 export default function Header() {
   return (

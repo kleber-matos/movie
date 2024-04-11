@@ -1,5 +1,6 @@
 /** @format */
-import styled from "styled-components";
+import * as S from "./style.jsx";
+
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,54 +15,33 @@ import filme4 from "../../assets/filme4.jpg";
 import filme5 from "../../assets/filme5.jpg";
 
 export default function Carrosel() {
-  const Container = styled.div`
-    .swiper-button-next::after {
-      color: #ffffff;
-    }
-    .swiper-button-prev::after {
-      color: #ffffff;
-    }
-
-    .swiper-pagination .swiper-pagination-bullet {
-      background-color: #ffffff;
-    }
-  `;
-
-  const Imagem = styled.img`
-    width: 100%;
-    height: 80vh;
-    opacity: 0.5;
-    background-color: black;
-
-    @media (max-width: 800px) {
-      width: 100%;
-      height: 40vh;
-    }
-  `;
-
   return (
-    <Container>
+    <S.Container>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}>
         <SwiperSlide>
-          <Imagem src={filme1} alt="" />
+          <S.Imagem src={filme1} alt="film" />
         </SwiperSlide>
+
         <SwiperSlide>
-          <Imagem src={filme2} alt="" />
+          <S.Imagem src={filme2} alt="film" />
         </SwiperSlide>
+
         <SwiperSlide>
-          <Imagem src={filme3} alt="" />
+          <S.Imagem src={filme3} alt="film" />
         </SwiperSlide>
+
         <SwiperSlide>
-          <Imagem src={filme4} alt="" />
+          <S.Imagem src={filme4} alt="film" />
         </SwiperSlide>
+
         <SwiperSlide>
-          <Imagem src={filme5} alt="" />
+          <S.Imagem src={filme5} alt="film" />
         </SwiperSlide>
       </Swiper>
-    </Container>
+    </S.Container>
   );
 }

@@ -2,21 +2,6 @@
 
 import styled from "styled-components";
 
-export const ContainerFilmes = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  border: solid white;
-
-  section {
-    border: red solid;
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-`;
-
 export const Card = styled.div`
   border: solid 2px red;
   display: flex;
@@ -80,5 +65,41 @@ export const SubTitle = styled.div`
   h2 {
     font-size: 2rem;
     font-weight: 600;
+  }
+
+  @media (max-width: 800px) {
+    height: 20vh;
+    text-align: center;
+  }
+`;
+
+export const Favoritos = styled.div`
+  @media (max-width: 800px) {
+    img {
+      width: 100vw;
+    }
+  }
+`;
+
+export const SectionFilms = styled.section`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+`;
+
+export const Pagination = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: white;
+  }
+
+  button:hover {
+    color: red;
   }
 `;

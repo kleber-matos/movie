@@ -1,5 +1,6 @@
-import React from "react";
+/** @format */
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Home from "../src/page/Home/Home";
 import Movie from "../src/page/Movie/Movie";
 

@@ -1,3 +1,4 @@
+/** @format */
 import React from "react";
 import load from "../../assets/loading.gif";
 import styled from "styled-components";
@@ -18,7 +19,7 @@ export default function Loading() {
 
   return (
     <Load>
-      <img src={load} alt="" />
+      <img src={load} alt="Carregando..." />
     </Load>
   );
 }
