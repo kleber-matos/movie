@@ -25,8 +25,9 @@ export default function Header() {
         </li>
       </S.List>
       <S.Lupa>
-        <input placeholder="Buscar filme..." type="text" />
-        <FaMagnifyingGlass />
+        <Link to="/seach">
+          <FaMagnifyingGlass />
+        </Link>
       </S.Lupa>
     </S.Header>
   );

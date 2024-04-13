@@ -12,12 +12,14 @@ export default function Movie() {
   const [filme, setFilme] = useState([]);
   const [load, setLoad] = useState(true);
   const { id } = useParams();
+  const [assistir, setAssistir] = useState("");
 
   const buscaDados = async () => {
     try {
       const dados = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}?api_key=6040fbaaf2352854942894b5b45b4729`
       );
+      setAssistir(id);
       setFilme(dados.data);
       setLoad(false);
       // console.log(dados.data);
@@ -50,30 +52,44 @@ export default function Movie() {
             <p>
               Avaliação: {filme.vote_average} |
               <span>
-                <AiFillStar />
+                <AiFillStar className="icon" />
               </span>
             </p>
           </S.Title>
 
           <S.About>
-            <p>City of {filme.production_countries[0].name}</p>
-            <p>{filme.tagline}</p>
-            <div>
+            <S.City>
+              <p>City of {filme.production_countries[0].name}</p>
+              <p>{filme.tagline}</p>
+            </S.City>
+
+            <S.Sinopse>
               <h3>Sinopse</h3>
               <p>{filme.overview}</p>
-            </div>
+            </S.Sinopse>
             <S.TagLink target="_blank" href={filme.homepage}>
-              <AiFillPlayCircle />
+              <AiFillPlayCircle className="icon" />
               Ver Trailer
+            </S.TagLink>
+            <S.TagLink href="#assistir">
+              <AiFillPlayCircle className="icon" />
+              assistir agora
             </S.TagLink>
           </S.About>
         </S.Details>
         <img
           className="imgFilme"
-          src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500/${filme.backdrop_path}`}
           alt="film"
         />
       </S.Container>
+
+      <S.Assistir>
+        <iframe
+          id="assistir"
+          src={`https://superflixapi.top/filme/${id}`}
+          frameborder="0"></iframe>
+      </S.Assistir>
     </>
   );
 }
