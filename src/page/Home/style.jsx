@@ -74,6 +74,29 @@ export const SubTitle = styled.div`
 `;
 
 export const Favoritos = styled.div`
+  .play {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: black;
+  }
+
+  .play:hover {
+    opacity: 0.8;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  img:hover {
+    opacity: 0.4;
+  }
+
   @media (max-width: 800px) {
     img {
       width: 100vw;

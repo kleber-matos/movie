@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
+import { AiFillPlayCircle } from "react-icons/ai";
 import * as S from "./style";
 import axios from "axios";
 
@@ -81,15 +82,17 @@ export default function Home() {
             },
           }}
           modules={[Navigation, Autoplay, Pagination]}
-          slidesPerView={4}
-          spaceBetween={200}
+          slidesPerView={2}
           autoplay={{ delay: 4000 }}>
           {filmes.map((item, id) => (
             <SwiperSlide key={id}>
               <Link to={`/movie/${item.id}`}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                />
+                <div>
+                  <AiFillPlayCircle className="play" />
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                  />
+                </div>
               </Link>
             </SwiperSlide>
           ))}

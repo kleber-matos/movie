@@ -7,7 +7,7 @@ import TodosOsFilmes from "../../components/TodosOsFilmes/TodosOsFilmes";
 import Loading from "../../components/Loading/Loading";
 
 export default function Seach() {
-  const [busca, setBusca] = useState("filme");
+  const [busca, setBusca] = useState("c");
   const [filme, setFilme] = useState([]);
   const [buscaFilmes, setBuscaFilmes] = useState("");
   const [mensagem, setMensagem] = useState("");

@@ -158,6 +158,7 @@ export const TagLink = styled.a`
   background-color: #f40612;
   color: white;
   width: 10vw;
+  height: 3vh;
   font-weight: 600;
   text-align: center;
   font-size: 1vw;
@@ -165,10 +166,14 @@ export const TagLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
   .icon {
     font-size: 1vw;
+  }
+
+  &:hover {
+    background-color: #ff0000b7;
   }
 
   @media (max-width: 800px) {

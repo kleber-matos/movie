@@ -24,7 +24,7 @@ export const List = styled.ul`
 
   a {
     color: #c4c4c4;
-    font-size: clamp(1.4rem, 5vw, 1rem);
+    font-size: clamp(1.3rem, 2vw, 5rem);
     font-weight: 600;
     display: flex;
     align-items: center;
