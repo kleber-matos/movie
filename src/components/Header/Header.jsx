@@ -17,16 +17,14 @@ export default function Header() {
             <BiSolidMoviePlay />
           </Link>
         </li>
+
         <li>
-          <Link>Tv</Link>
-        </li>
-        <li>
-          <Link>Séries</Link>
+          <Link to="/tv">Séries</Link>
         </li>
       </S.List>
       <S.Lupa>
         <Link to="/seach">
-          <FaMagnifyingGlass />
+          <FaMagnifyingGlass className="icon" />
         </Link>
       </S.Lupa>
     </S.Header>

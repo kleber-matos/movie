@@ -47,7 +47,9 @@ export const Lupa = styled.form`
   height: 40%;
   color: #c4c4c4;
   cursor: pointer;
-
+  .icon {
+    color: white;
+  }
   input {
     margin-right: 5px;
     width: 50%;

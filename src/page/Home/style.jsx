@@ -76,17 +76,14 @@ export const SubTitle = styled.div`
 export const Favoritos = styled.div`
   .play {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     opacity: 0;
-    color: black;
+    color: #000000d8;
   }
 
   .play:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   img {
