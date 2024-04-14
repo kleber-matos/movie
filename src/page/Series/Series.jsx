@@ -108,6 +108,7 @@ export default function Series() {
       <S.SectionFilms>
         {filmes.map((item, id) => (
           <TodasAsSeries
+            key={id}
             title={item.name}
             imagem={item.poster_path}
             id={item.id}

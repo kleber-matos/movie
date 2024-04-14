@@ -93,15 +93,6 @@ export default function Movie() {
           src={`https://superflixapi.top/filme/${id}`}
           frameborder="0"></iframe>
       </S.Assistir>
-      <S.Assistir>
-        <iframe
-          mozallowfullscreen
-          webkitallowfullscreen
-          allowfullscreen
-          id="assistir"
-          src={`https://superflixapi.top/serie/${id}`}
-          frameborder="0"></iframe>
-      </S.Assistir>
     </>
   );
 }

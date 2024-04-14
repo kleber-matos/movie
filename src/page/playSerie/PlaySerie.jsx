@@ -13,14 +13,12 @@ export default function PlaySeries() {
   const [filme, setFilme] = useState([]);
   const [load, setLoad] = useState(true);
   const { id } = useParams();
-  const [assistir, setAssistir] = useState("");
 
   const buscaDados = async () => {
     try {
       const dados = await axios.get(
         `https://api.themoviedb.org/3/tv/${id}?api_key=6040fbaaf2352854942894b5b45b4729`
       );
-      setAssistir(id);
       setFilme(dados.data);
       setLoad(false);
       console.log(dados.data);
