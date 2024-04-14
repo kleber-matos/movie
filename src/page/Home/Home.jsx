@@ -14,10 +14,6 @@ import TodosOsFilmes from "../../components/TodosOsFilmes/TodosOsFilmes";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
 
 export default function Home() {
   const [filmes, setFilmes] = useState([]);

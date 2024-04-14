@@ -3,10 +3,6 @@ import React, { useEffect, useState } from "react";
 import * as S from "../Home/style";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
 
 import axios from "axios";
 
