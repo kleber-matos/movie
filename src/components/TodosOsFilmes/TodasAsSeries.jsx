@@ -6,13 +6,7 @@ export default function TodasAsSeries({ title, id, imagem }) {
   return (
     <S.ContainerFilms>
       <Link to={`/tv/${id}`}>
-        {
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${imagem}`}
-            onError={""}
-            alt="films"
-          />
-        }
+        {<img src={`https://image.tmdb.org/t/p/w500/${imagem}`} alt="films" />}
 
         <h2>{title}</h2>
       </Link>
