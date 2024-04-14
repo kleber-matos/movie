@@ -12,8 +12,8 @@ import Carrosel from "../../components/Carrosel/Carrosel";
 import Footer from "../../components/Footer/Footer";
 import TodosOsFilmes from "../../components/TodosOsFilmes/TodosOsFilmes";
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Home() {
   const [filmes, setFilmes] = useState([]);
@@ -63,7 +63,7 @@ export default function Home() {
         <h2>SAIBA MAIS SOBRE SEU FILME FAVORITO</h2>
       </S.SubTitle>
 
-      <S.Favoritos>
+      {/* <S.Favoritos>
         <Swiper
           breakpoints={{
             1: {
@@ -93,7 +93,7 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </S.Favoritos>
+      </S.Favoritos> */}
 
       <S.SubTitle>
         <h2>Todos os filmes</h2>

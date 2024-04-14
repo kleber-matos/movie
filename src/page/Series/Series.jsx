@@ -1,8 +1,8 @@
 /** @format */
 import React, { useEffect, useState } from "react";
 import * as S from "../Home/style";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 import axios from "axios";
 
@@ -65,7 +65,7 @@ export default function Series() {
         <h2>SAIBA MAIS SOBRE SUAS SÉRIES FAVORITAS</h2>
       </S.SubTitle>
 
-      <S.Favoritos>
+      {/* <S.Favoritos>
         <Swiper
           breakpoints={{
             1: {
@@ -95,7 +95,7 @@ export default function Series() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </S.Favoritos>
+      </S.Favoritos> */}
 
       <S.SubTitle>
         <h2>Todas as séries</h2>
