@@ -9,6 +9,13 @@ import * as S from "./style.jsx";
 // import "swiper/css/pagination";
 // import "swiper/css/autoplay";
 
+// import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/autoplay";
+
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -26,8 +33,7 @@ export default function Carrosel() {
   return (
     <S.Container>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation
+        modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{ delay: 1000 }}>
         <SwiperSlide>
