@@ -12,8 +12,8 @@ import Carrosel from "../../components/Carrosel/Carrosel";
 import Footer from "../../components/Footer/Footer";
 import TodosOsFilmes from "../../components/TodosOsFilmes/TodosOsFilmes";
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
 
 export default function Home() {
   const [filmes, setFilmes] = useState([]);
@@ -96,26 +96,19 @@ export default function Home() {
         </Swiper>
       </S.Favoritos> */}
 
-      <S.Favoritos>
+      {/* <S.Favoritos>
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          slidesPerView={4}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 2000 }}>
-          {filmes.map((item, id) => (
-            <SwiperSlide>
-              <S.SlideCard key={id}>
-                <Link to={`/movie/${item.id}`}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                  />
-                </Link>
-              </S.SlideCard>
-            </SwiperSlide>
-          ))}
+          spaceBetween={50}
+          slidesPerView={3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}>
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          ...
         </Swiper>
-      </S.Favoritos>
+      </S.Favoritos> */}
 
       <S.SubTitle>
         <h2>Todos os filmes</h2>
