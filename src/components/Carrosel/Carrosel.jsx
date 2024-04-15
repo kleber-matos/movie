@@ -8,9 +8,13 @@ import * as S from "./style.jsx";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 // import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
+
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 import filme1 from "../../assets/filme1.jpg";
 import filme2 from "../../assets/filme2.jpg";
@@ -22,12 +26,10 @@ export default function Carrosel() {
   return (
     <S.Container>
       <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 1000 }}
-        spaceBetween={50}
-        slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}>
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 1000 }}>
         <SwiperSlide>
           <S.Imagem src={filme1} alt="film" />
         </SwiperSlide>

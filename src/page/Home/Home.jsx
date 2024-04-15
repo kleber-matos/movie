@@ -61,7 +61,7 @@ export default function Home() {
 
       <S.SubTitle>
         {/* <h2>SAIBA MAIS SOBRE SEU FILME FAVORITO</h2> */}
-        <h2>testando</h2>
+        <h2>foi</h2>
       </S.SubTitle>
 
       {/* <S.Favoritos>
