@@ -60,7 +60,8 @@ export default function Home() {
       <Carrosel />
 
       <S.SubTitle>
-        <h2>SAIBA MAIS SOBRE SEU FILME FAVORITO</h2>
+        {/* <h2>SAIBA MAIS SOBRE SEU FILME FAVORITO</h2> */}
+        <h2>teste</h2>
       </S.SubTitle>
 
       <S.Favoritos>
