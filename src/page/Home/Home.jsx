@@ -64,7 +64,7 @@ export default function Home() {
         <h2>teste</h2>
       </S.SubTitle>
 
-      <S.Favoritos>
+      {/* <S.Favoritos>
         <Swiper
           breakpoints={{
             1: {
@@ -91,6 +91,29 @@ export default function Home() {
                   />
                 </div>
               </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </S.Favoritos> */}
+
+      <h1>ccard</h1>
+
+      <S.Favoritos>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={4}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2000 }}>
+          {filmes.map((item, id) => (
+            <SwiperSlide key={id}>
+              <S.SlideCard>
+                <Link to={`/movie/${item.id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                  />
+                </Link>
+              </S.SlideCard>
             </SwiperSlide>
           ))}
         </Swiper>

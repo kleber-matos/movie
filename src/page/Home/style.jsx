@@ -123,3 +123,9 @@ export const Pagination = styled.section`
     color: red;
   }
 `;
+
+export const SlideCard = styled.div`
+  img {
+    width: 20vw;
+  }
+`;
