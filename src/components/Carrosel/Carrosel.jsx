@@ -8,7 +8,7 @@ import * as S from "./style.jsx";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 // import "swiper/css/autoplay";
-
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -22,6 +22,8 @@ export default function Carrosel() {
   return (
     <S.Container>
       <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 1000 }}
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => console.log("slide change")}
