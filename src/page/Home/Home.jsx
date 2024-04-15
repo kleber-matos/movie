@@ -61,7 +61,7 @@ export default function Home() {
 
       <S.SubTitle>
         {/* <h2>SAIBA MAIS SOBRE SEU FILME FAVORITO</h2> */}
-        <h2>teste</h2>
+        <h2>testando</h2>
       </S.SubTitle>
 
       {/* <S.Favoritos>
@@ -96,8 +96,6 @@ export default function Home() {
         </Swiper>
       </S.Favoritos> */}
 
-      <h1>ccard</h1>
-
       <S.Favoritos>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -106,8 +104,8 @@ export default function Home() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 2000 }}>
           {filmes.map((item, id) => (
-            <SwiperSlide key={id}>
-              <S.SlideCard>
+            <SwiperSlide>
+              <S.SlideCard key={id}>
                 <Link to={`/movie/${item.id}`}>
                   <img
                     src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
